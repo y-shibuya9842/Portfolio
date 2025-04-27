@@ -1,0 +1,55 @@
+.header{
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center; /* ← 画像とテキストを縦方向に中央揃え */
+    gap: 10px;            /* ← 画像とテキストの間にスペースを作る（お好み） */
+    color: #ffffff;
+}
+
+.header-logo{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-menu li a:hover {
+    text-decoration: underline;
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
