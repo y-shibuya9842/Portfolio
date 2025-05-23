@@ -1,0 +1,128 @@
+#skill .grid {
+    padding: 0 128px;
+}
+
+.skill {
+    color: black;
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.skill p{
+    margin: 0;
+}
+
+.skill-title{
+    padding-left: 128px;
+}
+
+.skill-name{
+    display: flex;
+}
+
+.skill-skill{
+    display: flex;
+    height: 68px;
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+button {
+    border: none; /* ボーダーなし */
+    padding: 10px 20px; /* パディングでボタンの大きさを調整 */
+    font-size: 16px; /* フォントサイズ */
+    cursor: pointer; /* カーソルがポインターに変わる */
+    border-radius: 5px; /* 角を丸く */
+    transition: background-color 0.3s, transform 0.2s; /* ホバー時にアニメーションを適用 */
+    height:72px;
+}
+
+button:hover {
+    transform: scale(1.05); /* ホバー時に少し拡大 */
+}
+
+.all{
+    background-color: #B58728; /* 背景色 */
+    color: white; /* 文字色 */
+}
+
+button.all:hover {
+    background-color: #8d681e; /* ホバー時の背景色 */
+}
+  
+button.all:active {
+    background-color: #4d3810; /* クリック時の背景色 */
+}
+
+.frontend{
+    background-color: #2a6d47; /* 背景色 */
+    color: white; /* 文字色 */
+}
+
+button.frontend:hover {
+    background-color: #1d4d31; /* ホバー時の背景色 */
+}
+  
+button.frontend:active {
+    background-color: #122e1e; /* クリック時の背景色 */
+}
+
+.backend{
+    background-color: #1a2a6c; /* 背景色 */
+    color: white; /* 文字色 */
+}
+
+button.backend:hover {
+    background-color: #131f50; /* ホバー時の背景色 */
+}
+  
+button.backend:active {
+    background-color: #0a1029; /* クリック時の背景色 */
+}
+
+.db{
+    background-color: #834e16; /* 背景色 */
+    color: white; /* 文字色 */
+}
+
+button.db:hover {
+    background-color: #543310; /* ホバー時の背景色 */
+}
+  
+button.db:active {
+    background-color: #36210a; /* クリック時の背景色 */
+}
+
+.markup-and-style{
+    background-color: #3e1f47; /* 背景色 */
+    color: white; /* 文字色 */
+}
+
+button.markup-and-style:hover {
+    background-color: #2e1735; /* ホバー時の背景色 */
+}
+  
+button.markup-and-style:active {
+    background-color: #2b1531; /* クリック時の背景色 */
+}
+
+.others{
+    background-color: #8d8d8d; /* 背景色 */
+}
+
+button.others:hover {
+    background-color: #636262; /* ホバー時の背景色 */
+}
+  
+button.others:active {
+    background-color: #3d3d3d; /* クリック時の背景色 */
+}
+  
+button:focus {
+    outline: none; /* フォーカス時のアウトラインを非表示 */
+}
+
+

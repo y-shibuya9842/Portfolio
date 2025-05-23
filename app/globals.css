@@ -1,3 +1,10 @@
+/* グリッド全体の定義 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12等分 */
+  gap: 16px; /* カラム間のスペース（必要に応じて調整） */
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,7 +17,69 @@
   }
 }
 
-html,
+html {
+  font-size: 16px; /* ベースサイズ */
+  scroll-behavior: smooth;
+}
+
+/*デフォルト（PCサイズ） */
+  h1 {font-size: 3rem;}
+  h2 {font-size: 2rem;}
+  p {font-size: 1.3rem;}
+  /* 各カラム幅の指定（1〜12） */
+  .col-1  { grid-column: span 1; }
+  .col-2  { grid-column: span 2; }
+  .col-3  { grid-column: span 3; }
+  .col-4  { grid-column: span 4; }
+  .col-5  { grid-column: span 5; }
+  .col-6  { grid-column: span 6; }
+  .col-7  { grid-column: span 7; }
+  .col-8  { grid-column: span 8; }
+  .col-9  { grid-column: span 9; }
+  .col-10 { grid-column: span 10; }
+  .col-11 { grid-column: span 11; }
+  .col-12 { grid-column: span 12; }
+
+/* タブレット（〜1023px） */
+@media (min-width: 600px) and (max-width: 1023px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  p  { font-size: 1.1rem; }
+  /* 各カラム幅の指定（1〜12） */
+  .col-1-md  { grid-column: span 1; }
+  .col-2-md  { grid-column: span 2; }
+  .col-3-md  { grid-column: span 3; }
+  .col-4-md  { grid-column: span 4; }
+  .col-5-md  { grid-column: span 5; }
+  .col-6-md  { grid-column: span 6 !important; }
+  .col-7-md  { grid-column: span 7; }
+  .col-8-md  { grid-column: span 8; }
+  .col-9-md  { grid-column: span 9; }
+  .col-10-md { grid-column: span 10; }
+  .col-11-md { grid-column: span 11; }
+  .col-12-md { grid-column: span 12; }
+}
+
+/* スマホ（〜599px） */
+@media (max-width: 599px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  p  { font-size: 1rem; }
+  /* 各カラム幅の指定（1〜12） */
+  .col-1-sm  { grid-column: span 1; }
+  .col-2-sm  { grid-column: span 2; }
+  .col-3-sm  { grid-column: span 3; }
+  .col-4-sm  { grid-column: span 4; }
+  .col-5-sm  { grid-column: span 5; }
+  .col-6-sm  { grid-column: span 6; }
+  .col-7-sm  { grid-column: span 7; }
+  .col-8-sm  { grid-column: span 8; }
+  .col-9-sm  { grid-column: span 9; }
+  .col-10-sm { grid-column: span 10; }
+  .col-11-sm { grid-column: span 11; }
+  .col-12-sm { grid-column: span 12; }
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -39,4 +108,29 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #1976d2; /* MUIのblueっぽい色 */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease-in-out;
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
 }

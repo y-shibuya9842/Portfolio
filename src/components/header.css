@@ -1,55 +1,130 @@
-.header{
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    padding: 0;
-    margin: 0;
+.header .grid{
+  padding: 0 68px;
 }
 
-.container{
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header {
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  color: white;
+  margin: 0;
+}
+  
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-.logo{
-    display: flex;
-    align-items: center; /* ← 画像とテキストを縦方向に中央揃え */
-    gap: 10px;            /* ← 画像とテキストの間にスペースを作る（お好み） */
-    color: #ffffff;
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 10px;
+  color: #ffffff;
 }
-
-.header-logo{
-    border-radius: 50%;
-    object-fit: cover;
+  
+.header-logo {
+  border-radius: 50%;
+  object-fit: cover;
 }
-
-.nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1.5rem;
+  
+/* デスクトップ用メニュー */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .nav-menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .nav-menu li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.logo-img {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+/* ハンバーガーアイコン */
+.menu-icon {
+  display: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* モバイルスタイル */
+@media (max-width: 768px) {
+  .menu-icon {
+    z-index: 1100;
+    display: block;
   }
+
+  .nav-menu {
+    display: block;          /* 常に表示で制御はrightで */
+    position: fixed;
+    top: 0;
+    right: -300px;          /* 初期は画面外 */
+    width: 300px;
+    height: 100vh;
+    background-color: #333; /* 好みで色調整 */
+    box-shadow: -2px 0 8px rgba(0,0,0,0.5);
+    padding-top: 60px;      /* ヘッダー分の余白 */
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .nav-menu ul li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nav-menu ul li a {
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+  }
+
+  .nav-menu ul li a:hover {
+    background-color: #555;
+  }
+}
   
+/* 768px超えたらハンバーガーは非表示 */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* タブレット（〜1023px） */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .header .grid{
+    padding: 0 32px;
+  }
+}
+
+/* スマホ（〜599px） */
+@media (max-width: 599px) {
+  .header .grid{
+    padding: 0 16px;
+  }
+}

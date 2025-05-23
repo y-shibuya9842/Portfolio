@@ -1,0 +1,57 @@
+#work .grid {
+    padding: 0 128px;
+}
+
+.work-title{
+    padding-left: 128px;
+}
+
+.work {
+    background-color: #cecece;
+    padding:32px;
+    color:#000000;
+}
+
+.work-image {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.work-abouts{
+    width: 50%;
+}
+
+.work-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* 必要に応じて */
+}
+
+.work-content{
+    display: flex;
+    gap: 16px;
+}
+
+.work-content-title{
+    display: flex;
+    justify-content: center;
+}
+
+.work-description h4{
+    margin-top: 0;
+}
+
+.work-description div,
+.work-link a {
+    margin-left: 1rem; 
+}
+
+.work-link a {
+    color: #007bff;
+    font-weight: 500;
+}
+
+.work-link p {
+    margin: 0 auto;
+}
